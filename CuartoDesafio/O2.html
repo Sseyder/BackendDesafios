@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text "id="textBox">
+    <span></span>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/8.0.0-alpha.2/rxjs.umd.min.js"></script>
+<script>
+
+// Importamos de la libreria RXJS
+const {fromEvent, Observable} = rxjs;
+const {switchMap} = rxjs.oparatos;
+
+const input = document.getElementsByTagName('input')[0];
+const span = document.getElementsByTagName('span')[0];
+
+const observableInput = fromEvent(input, 'input').pipe(
+            switchMap((event) => new Observable(observer => {
+                let text = event.target.value;
+                if (text === 'error') {
+                    observer.error('El usuario ingresó error');
+                } else if (texto === 'complete') {
+                    observer.complete('')
+                } else { observer.next(texto); }
+            }
+        )
+    )
+);
+
+const observer = {
+        next: next,
+        error: error,
+        complete: complete
+}
+
+setTimeout (() => {
+    susbcription.unsubscribe();
+    input.disabled = true;
+    span.innerHTML = '';
+    console.info('La subscripción al observerber finalizó por tiempo estimado agotado');
+}, 30000)
+
+const subscription = observableInput.subscribe(observer);
+
+function next(text) {
+    span.innerHTML = text.split('').reverse().join('');
+}
+
+function error(error) {
+    console.error(error);
+    input.disabled = true;
+     span.innerHTML = '';
+}
+
+function complete() {
+     console.info("Oberver completado")
+    input.disabled = true;
+    span.innerHTML = '';
+}
+
+</script>
+</html>
