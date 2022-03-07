@@ -24,9 +24,9 @@ const observableInput = fromEvent(input, 'input').pipe(
             switchMap((event) => new Observable(observer => {
                 let text = event.target.value;
                 if (text === 'error') {
-                    observer.error('El usuario ingresó error');
+                    observer.error('El usuario ingresó "error"');
                 } else if (texto === 'complete') {
-                    observer.complete('')
+                    observer.complete('El usuario ingresó "complete"')
                 } else { observer.next(texto); }
             }
         )
