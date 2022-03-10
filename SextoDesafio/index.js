@@ -60,4 +60,4 @@ file.save ({
     thumbnail:"URLProduct3"
 })
 file.read();
-console.log(products)
+console.log(products);
