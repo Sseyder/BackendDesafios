@@ -44,17 +44,17 @@ class File {
 const file = new File("products.txt");
 
 //Formato de cada producto
-file.guardar({
+file.save ({
     title:"Product 1",
     price: 500,
     thumbnail:"URLProduct1"
 })
-file.guardar({
+file.save ({
     title:"Product 2",
     price: 2500,
     thumbnail:"URLProduct2"
 })
-file.guardar({
+file.save ({
     title:"Product 3",
     price: 1300,
     thumbnail:"URLProduct3"
