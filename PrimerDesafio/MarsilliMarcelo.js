@@ -41,7 +41,7 @@ class Usuario {
     getNombresLibros() {
         console.log(this.libros.map((libro) => libro.nombre));
     }
-
+    // Nos muestra los nombres de los autores, no de los libros.
     getNombresAutores (){
         console.log(this.libros.map((autor) => autor.autor));
     }
@@ -50,15 +50,21 @@ class Usuario {
 // Se crea la constante del nuevo usuario con su nombre y los dos arrays correspondientes
 const leonel = new Usuario ('Leonel', 'Marsilli', [], []);
 
+// Nos devuelve el nombre entero del Usuario
 leonel.getFullName();
+// Se agregan libros y autores al array de libros
 leonel.addLibro('Cien Años de Soledad', 'Gabriel Garcia Marquez');
 leonel.addLibro('El Imperio Final', 'Brandon Sanderson');
 leonel.addLibro('Aleacion de Ley', 'Brandon Sanderson');
 leonel.addLibro('Amanecer Rojo', 'Pierce Brown');
+// Se agregan mascotas al array de mascotas
 leonel.addMascota('Arturo');
 leonel.addMascota(' Misha');
 leonel.addMascota(' Hinata');
+// Se cuenta el total de mascotas
 leonel.countMascotas();
+// Nos devuelve el nombre de todas las mascotas
 leonel.getNombresMascotas();
+// Nos devuelve el nombre de los libros y los autores en 2 arrays separados
 leonel.getNombresLibros();
 leonel.getNombresAutores();
