@@ -41,6 +41,10 @@ class Usuario {
     getNombresLibros() {
         console.log(this.libros.map((libro) => libro.nombre));
     }
+
+    getNombresAutores (){
+        console.log(this.libros.map((autor) => autor.autor));
+    }
 }
 
 // Se crea la constante del nuevo usuario con su nombre y los dos arrays correspondientes
@@ -57,3 +61,4 @@ leonel.addMascota(' Hinata');
 leonel.countMascotas();
 leonel.getNombresMascotas();
 leonel.getNombresLibros();
+leonel.getNombresAutores();
