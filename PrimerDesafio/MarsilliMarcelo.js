@@ -34,7 +34,7 @@ class Usuario {
         this.libros = newLibro;
 
         // Otra forma de agregar un libro nuevo.
-        // this.libros.push( {nombre: libro, autor} )
+        // this.libros.push( {nombre: libro, autor: autor} )
     }
 
     // Nos muestra los nombres de los libros, no los autores.
@@ -57,10 +57,12 @@ leonel.addLibro('Cien Años de Soledad', 'Gabriel Garcia Marquez');
 leonel.addLibro('El Imperio Final', 'Brandon Sanderson');
 leonel.addLibro('Aleacion de Ley', 'Brandon Sanderson');
 leonel.addLibro('Amanecer Rojo', 'Pierce Brown');
+leonel.addLibro('Anne de las Tejas Verdes','Lucy Montgomery')
 // Se agregan mascotas al array de mascotas
 leonel.addMascota('Arturo');
 leonel.addMascota(' Misha');
 leonel.addMascota(' Hinata');
+leonel.addMascota(' Tomi');
 // Se cuenta el total de mascotas
 leonel.countMascotas();
 // Nos devuelve el nombre de todas las mascotas
