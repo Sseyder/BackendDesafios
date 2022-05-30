@@ -28,7 +28,7 @@ class Usuario {
         console.log(`Mis mascotas se llaman ${this.mascotas}`);
     }
 
-    // Esta funcion nos permite agregar un libro nuevo al arrat de libros.
+    // Esta funcion nos permite agregar un libro nuevo al array de libros.
     addLibro(libro, autor) {
         const newLibro = [...this.libros, {nombre: libro, autor: autor}];
         this.libros = newLibro;
